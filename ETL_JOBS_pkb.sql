@@ -1,11 +1,5 @@
---------------------------------------------------------
---  File created - Monday-May-06-2019   
---------------------------------------------------------
---------------------------------------------------------
---  DDL for Package Body ETL_JOBS
---------------------------------------------------------
-
-  CREATE OR REPLACE NONEDITIONABLE PACKAGE BODY "DUMMY"."ETL_JOBS" AS
+CREATE OR REPLACE
+PACKAGE BODY ETL_JOBS AS
 
   PROCEDURE ORDER_SOURCE_TO_STAGE AS
   BEGIN
@@ -29,7 +23,7 @@
     into oORDER_KEY
     from order_xref;
     
-    insert into order_xref values (oORDER_KEY, vORDER_ID);
+    insert into order_xref(order_key,order_id) values (oORDER_KEY, vORDER_ID);
     
     else
     
@@ -40,10 +34,9 @@
     
     end if;
     
+    commit;
     
     RETURN oORDER_KEY;
   END ORDER_KEY_CHECK;
 
 END ETL_JOBS;
-
-/
