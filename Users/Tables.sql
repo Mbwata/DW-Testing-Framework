@@ -5,7 +5,7 @@
 --  DDL for Table ORDER_LINES
 --------------------------------------------------------
 
-  CREATE TABLE "DUMMY"."ORDER_LINES" 
+  CREATE TABLE "ORDER_LINES" 
    (	"LINE_KEY" NUMBER
    ) SEGMENT CREATION DEFERRED 
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
@@ -15,7 +15,7 @@
 --  DDL for Table ORDER_XREF
 --------------------------------------------------------
 
-  CREATE TABLE "DUMMY"."ORDER_XREF" 
+  CREATE TABLE "ORDER_XREF" 
    (	"ORDER_KEY" NUMBER, 
 	"ORDER_ID" VARCHAR2(20 BYTE)
    ) SEGMENT CREATION DEFERRED 
@@ -26,7 +26,7 @@
 --  DDL for Table SOURCE_ORDER_HEADER
 --------------------------------------------------------
 
-  CREATE TABLE "DUMMY"."SOURCE_ORDER_HEADER" 
+  CREATE TABLE "SOURCE_ORDER_HEADER" 
    (	"ORDER_ID" VARCHAR2(20 BYTE), 
 	"CUSTOMER_KEY" VARCHAR2(20 BYTE), 
 	"ORDER_DATE" VARCHAR2(20 BYTE)
@@ -41,7 +41,7 @@
 --  DDL for Table STAGE_ORDER_HEADER
 --------------------------------------------------------
 
-  CREATE TABLE "DUMMY"."STAGE_ORDER_HEADER" 
+  CREATE TABLE "STAGE_ORDER_HEADER" 
    (	"ORDER_KEY" NUMBER, 
 	"ORDER_ID" VARCHAR2(20 BYTE), 
 	"CUSTOMER_KEY" NUMBER, 
@@ -54,7 +54,7 @@
 --  DDL for Table TABLE1
 --------------------------------------------------------
 
-  CREATE TABLE "DUMMY"."TABLE1" 
+  CREATE TABLE "TABLE1" 
    (	"COLUMN1" VARCHAR2(20 BYTE)
    ) SEGMENT CREATION DEFERRED 
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
